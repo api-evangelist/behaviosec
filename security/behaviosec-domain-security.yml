@@ -1,0 +1,22 @@
+generated: '2026-07-18'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.behaviosec.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Dec 25 16:41:22 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+domains:
+- domain: behaviosec.com
+  dnssec: true
+  caa:
+  - 0 issue "ssl.com"
+  - 0 issuewild "amazontrust.com"
+  - 0 issuewild "comodoca.com"
+  - 0 issuewild "digicert.com; cansignhttpexchanges=yes"
+  - 0 issuewild "globalsign.com"
+  - 0 issuewild "letsencrypt.org"
+  spf: true
+  dmarc: false
